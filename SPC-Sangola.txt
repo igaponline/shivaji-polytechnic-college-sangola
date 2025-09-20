@@ -1,0 +1,408 @@
+Artificial Intelligence
+
+It refers to the development of computer systems that can perform tasks requiring human intelligence. 
+
+These tasks include reasoning, learning, problem-solving, and even understanding language.
+
+AI technologies consists of following terminologies
+
+1. Machine Learning
+2. Deep Learning
+3. Data Analysis
+4. Data Science
+5. Data Engineering
+
+and many more...
+
+AI - It enables machine to think and perform tasks without human intervention.
+
+ML - It is subset of AI. It deals with development algorithms which helps to take decisions.
+
+DL - It is subset of ML. It has multineural network architecture. It mimics human brain.
+
+DS - It is study of data to extract meaningful insights using different tools, programming and mathematics.
+
+DA - It involves collecting, cleaning, transforming, describing, modeling and interpreting data to help in business decision making.
+
+DE - It involves building and maintaining data pipelines.
+
+Python
+ - Basic program
+ - if-else
+ - loop
+ - list, dict
+ 
+Data Preprocessing and Cleaning
+	Numpy
+	Pandas
+	Matplotlib
+
+ML Algorithm - Regression and Classification
+DL - Project - Hand written digit classification(Tensorflow)
+
+First Python program in Jupyter
+
+Process to install jupyter
+
+1. Open Command prompt
+
+2. Execute command
+
+	pip install notebook
+	
+1. WAP to perform mathematical operations(+,-,*,/,%) on two integer nos.
+
+2. WAP to find largest no among 3.
+
+3. WAP to print numbers from 1 to 100 in line(tab seperated).
+
+4. WAP to perform addition and subtraction of 2 matrix using list.
+
+5. WAP to print multiplication table.
+
+6. Print following patterns
+
+*
+**
+***
+****
+*****
+
+1 *
+2 **
+3 ***
+4 ****
+5 *****
+
+*****
+****
+***
+**
+*
+
+     *
+    * *
+   * * *
+  * * * *
+ * * * * *
+
+7. WAP to check whether no is prime or not.
+
+To open jupyter 
+
+Execute command
+
+jupyter notebook
+
+#include<stdio.h>
+
+int main(){
+	printf("Hello World");
+	return 0;
+} 
+
+
+print('Hello World')
+
+
+
+#include<stdio.h>
+
+int main(){
+	int no1, no2, add, sub, mul, div, rem;	
+	printf("Enter First No:");
+	scanf("%d", &no1);
+	printf("Enter Second No:");
+	scanf("%d", &no2);
+	add = no1 + no2;
+
+	printf("Addition is: %d", add);
+	.
+	.
+	.
+
+	return 0;
+} 
+
+
+  
+
+
+
+if(no1 > no2 && no1 > no3){
+	printf("");
+}
+else if(
+
+
+if no1 > no2 and no1 > no3:
+	print("")
+	print("")
+	
+Loop - used to perform similar operation multiple times
+
+total 4 operations we perform in loop
+
+start
+end
+step
+operation
+
+for i in range(1, 100, 1):
+	print(i)
+	
+To develop Machine Learning projects we use different libraries in python. Some of the important libraries are
+
+1. Numpy
+2. Pandas
+3. Matplotlib and Seaborn
+4. ScikitLearn
+
+To use these libraries we need to install them using following command
+
+pip install numpy
+pip install pandas
+pip install matplotlib
+pip install seaborn
+pip install scikit-learn
+
+List in python
+
+friends = ["Abhijit", "Kishor", "Vivek", "Ganesh"]
+
+To find nth element we must iterate through entire list and it is time consuming.
+
+To solve this issue 'Travis Oliphant' introduced Array in numpy library in 2005.
+
+Array is collection of elements of similar datatype.
+
+Array stores elements in continueous manner.
+
+0 111 1111 1111 1111 1111 1111 1111 1111
+
+0 111 1111 1111 1111
+
+1 + 2 + 4 + 8 + 16 + 32 + 64  = 127
+
+Area of Circle: 
+
+pi*r*r
+
+
+5 - 60
+6 - 65
+7 - 70
+8 - 75
+9 - ?
+
+Every year score + 5
+
+5 - 80
+6 - 82
+7 - 78
+8 - 75
+9 - ?
+
+
+-----------------------------
+
+M - 2000
+T - 3000
+W - -1000
+T - ?
+------------------------------
+
+Stock Price Prediction
+
+--------------------------------------
+In ML, we use diffent predefined algorithms to predict progressing value, class value or cluster(group) value for given input.
+--------------------------------------
+ML has different categories
+
+1. Regression
+2. Classification
+3. Clustering
+4. Association
+
+---------------------------------------
+
+To solve projects like Car Price Prediction, House Price Prediction, Stock Price Prediction we use Linear Regression Algorithm.
+
+This algorithm is based on concept of straight line and it uses following formula
+
+y = mx + b
+
+m - coefficient(slope)
+b - intercept(y's value for 0)
+
+If there are multiple parameters(input) to predict value we use following formula
+
+y = m1x1 + m2x2 + .... + mnxn + b
+
+-------------------------------------------------
+
+Car - Second Hand
+
+Hyundai - Creta
+
+model - 2018
+kms driven - 100000
+insurance - 
+fuel type
+.
+.
+.
+.
+-------------------------------------
+
+Car Price Prediction Project using Linear Regression
+
+Download dataset from github
+
+- Goto github.com and search for 'igaponline'
+
+- https://github.com/igaponline?tab=repositories
+
+- Download zip file
+
+- In ML project we get data in CSV(Comma Seperated Values) format.
+
+- To load csv file in project we use pandas library
+
+#Import libraries
+
+import numpy as np
+import pandas as pd
+
+#Import csv file
+
+df = pd.read_csv("quikr_car.csv")
+
+In AI projects we get data from different sources. This data is not cleaned. ML algorithm needs clean data and we need to clean that data.
+
+Before cleaning we need to analyse data.
+
+# Find no of columns
+
+df.columns
+
+#Check datatypes of columns
+
+df.info()
+
+We found that 
+1. there are 6 columns
+2. Price is output column
+3. All columns has 'object'(string) datatype
+	Expected datatypes are
+	
+	name - object
+	company -  object
+	year - int
+	Price - float
+	kms_driven - int
+	fuel_type - object
+	
+4. Many records has null values(empty)
+5. year column has many non-year values
+	df["year"].unique()
+6. Price column has ',' in every value and 'Ask For Price'
+	df["Price"].unique()
+7. kms_driven column has ',' and ' kms' in every value.
+	df["kms_driven"].unique()
+8. fuel_type column has null values
+	df["fuel_type"].unique()
+9. company column has wrong values.
+	df["company"].unique()
+10. name column has wrong values
+	df["name"].unique()
+
+Data Cleaning
+
+1. We will remove records who has null values
+
+df.dropna(inplace = True)
+
+While cleaning data we must clean numerical columns first and then go for string.
+
+2. Change datatype of column year to int
+
+df["year"] = pd.to_numeric(df["year"], errors = 'coerce')
+
+3. Change Price column datatype to float. 
+	1. But every record contains ',' in it.
+		Repalce ',' from every value
+
+	for i in df.index:
+		price = df.loc[i, "Price"]
+		price = price.replace(',', '')
+		df.loc[i, "Price"] = price
+	2. Change datatype
+	
+	df["Price"] = pd.to_numeric(df["Price"], errors = 'coerce')
+	df.dropna(inplace = True)
+	
+4. Clean 'kms_driven' column
+
+	for i in df.index:
+		kms_driven = df.loc[i, "kms_driven"]
+		kms_driven = kms_driven.replace(',', '')
+		kms_driven = kms_driven.replace(' kms', '')
+		df.loc[i, "kms_driven"] = kms_driven
+
+	df["kms_driven"] = pd.to_numeric(df["kms_driven"], errors = 'coerce')
+	df.dropna(inplace = True)
+
+5. Remove company name from name column
+
+	for i in df.index:
+		name = df.loc[i, "name"]
+		company = df.loc[i, "company"]
+		name = name.replace(company, '').strip()
+		df.loc[i, "name"] = name
+		
+6. #Check if there are any duplicate records
+	df.duplicated().value_counts()
+	
+	#Remove duplicate records
+	df.drop_duplicates(inplace = True)
+
+7. Save cleaned file to use in next part
+
+	df.to_csv("cleaned_data.csv")
+
+
+ML algorithm needs data in numerical format, because it uses statistical methods and mathematics.
+
+Create new notebook - implementation.ipynb
+
+#Import libraries
+
+import numpy as np
+import pandas as pd
+
+#load cleaned data
+
+df = pd.read_csv("cleaned_data.csv")
+
+#divide dataset into training and testing
+
+OneHotEncoding
+
+Country_America Country_China Country_India
+  1                0               0
+  0                0               1
+  
+Column Transformer
+
+
+
+
+
+
+
+
+
+
+
+
